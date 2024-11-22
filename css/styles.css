@@ -1,17 +1,93 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(45deg, #e74c3c, #f39c12, #f1c40f, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s linear infinite;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: -20px;
+  height: 90vh;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
   color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
 }
+
+body p {
+  font-weight: bold;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
 #result .green {
-  color: #2ecc71;
+  color: #00b049;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 #result .red {
   color: #e74c3c;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#result .numerosResultados {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#countdown {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+#userInput {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  width: 40px;
+  text-align: center;
+}
+
+#restart {
+  background-image: linear-gradient(to right, #dc3545, #e0666e);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#restart:hover {
+  background-image: linear-gradient(to right, #d81d30, #e0666e);
 }
